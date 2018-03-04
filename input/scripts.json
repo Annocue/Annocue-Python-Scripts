@@ -1,0 +1,5 @@
+{
+  "script.event.nba.Games": ["GSW", "3"],
+  "script.investment.stock.Prices": ["BABA", "DIS", "ATVI"],
+  "script.weather.forecast.Days": ["San Francisco", "CA", "2"]
+}
