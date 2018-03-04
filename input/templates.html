@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <section>
+  <h3>EVENTS</h3>
+  {% for i in range(0, eventNbaGames.__len__()) %}
+    <ul style="list-style-type:none">
+      {% for key, value in eventNbaGames[i].items() %}
+          <li>{{ key }}: {{ value }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  </section>
+
+  <section>
+  <h3>INVESTMENTS</h3>
+  {% for i in range(0, investmentStockPrices.__len__()) %}
+    <ul style="list-style-type:none">
+      {% for key, value in investmentStockPrices[i].items() %}
+          <li>{{ key }}: {{ value }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  </section>
+
+  <section>
+  <h3>WEATHER</h3>
+  {% for i in range(0, weatherForecastDays.__len__()) %}
+    <ul style="list-style-type:none">
+      {% for key, value in weatherForecastDays[i].items() %}
+          <li>{{ key }}: {{ value }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  </section>
+
+</body>
+</html>
