@@ -15,7 +15,7 @@ class Prices:
       for i in range(0, len(self.stock)):
           output = request.Api('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=' + self.stock[i] + '&apikey=' + stockApiKey).json()
           lastRefresh = output['Meta Data']['3. Last Refreshed']
-          stockDetails = output['Time Series (Daily)'][lastRefresh]
+          stockDetails = output['Time Series (Daily)'][lastRefresh[:10]]
 
           dataObj = {
             'stock': self.stock[i].upper(),

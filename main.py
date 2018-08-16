@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from jinja2 import Template
+from premailer import transform
 
 # UTILITIES
 import utility.send as message
@@ -39,7 +40,7 @@ context = {}
 for doc in docs:
     user = doc.to_dict()
     email = user['email']
-    templates = Template(user['templates'])
+    templates = Template(transform(user['templates']))
     scripts = json.loads(user['scripts'])
 
     # Create list of scripts with their array of inputs

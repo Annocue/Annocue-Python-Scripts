@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  table {
-    width: 100%;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-
-  td {
-    border-bottom: 1px solid #ddd;
-  }
-
-  tr:nth-child(even){background-color: #f2f2f2}
-
-  th {
-    background-color: #66ff66;
-    color: #3399ff;
-  }
-</style>
+<style>tr:nth-child(even) {background-color:#f2f2f2}</style>
 </head>
 <body>
 
   <h3>EVENTS</h3>
-  <table>
+  <table style="font-family:Verdana, Geneva, sans-serif; font-size:12px; width:100%" width="100%">
   {% for i in range(0, eventNbaGames.__len__()) %}
     {% if loop.first %}
       <tr>
         {% for key, value in eventNbaGames[i].items() %}
-        <th>
+        <th style="padding:8px; text-align:left; background-color:#6f6; color:#39f" align="left" bgcolor="#66ff66">
           {{ key }}
         </th>
         {% endfor %}
@@ -42,7 +20,7 @@
 
     <tr>
       {% for key, value in eventNbaGames[i].items() %}
-          <td>
+          <td style="padding:8px; text-align:left; border-bottom:1px solid #ddd" align="left">
             {{ value }}
           </td>
       {% endfor %}
@@ -51,12 +29,12 @@
   </table>
 
   <h3>INVESTMENTS</h3>
-  <table>
+  <table style="font-family:Verdana, Geneva, sans-serif; font-size:12px; width:100%" width="100%">
   {% for i in range(0, investmentStockPrices.__len__()) %}
     {% if loop.first %}
       <tr>
         {% for key, value in investmentStockPrices[i].items() %}
-            <th>
+            <th style="padding:8px; text-align:left; background-color:#6f6; color:#39f" align="left" bgcolor="#66ff66">
               {{ key }}
             </th>
         {% endfor %}
@@ -65,7 +43,7 @@
 
     <tr>
       {% for key, value in investmentStockPrices[i].items() %}
-          <td>
+          <td style="padding:8px; text-align:left; border-bottom:1px solid #ddd" align="left">
             {{ value }}
           </td>
       {% endfor %}
@@ -74,12 +52,12 @@
   </table>
 
   <h3>WEATHER</h3>
-  <table>
+  <table style="font-family:Verdana, Geneva, sans-serif; font-size:12px; width:100%" width="100%">
   {% for i in range(0, weatherForecastDays.__len__()) %}
     {% if loop.first %}
       <tr>
         {% for key, value in weatherForecastDays[i].items() %}
-        <th>
+        <th style="padding:8px; text-align:left; background-color:#6f6; color:#39f" align="left" bgcolor="#66ff66">
           {{ key }}
         </th>
         {% endfor %}
@@ -88,7 +66,7 @@
 
     <tr>
       {% for key, value in weatherForecastDays[i].items() %}
-          <td>
+          <td style="padding:8px; text-align:left; border-bottom:1px solid #ddd" align="left">
             {{ value }}
           </td>
       {% endfor %}
